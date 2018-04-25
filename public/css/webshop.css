@@ -1,0 +1,17 @@
+body {
+    font-family: "Fira Code";
+    background-color: #333;
+    color: #EEE;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+a {
+    color:white;
+}
