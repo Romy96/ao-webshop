@@ -5,7 +5,7 @@
 
     <ul>
     @foreach($categories as $category)
-        <li>{{ $category->id }} - {{ $category->name }}</li>
+        <li><a href="{{url('article/index/' . $category->id)}}">{{ $category->id }} - {{ $category->name }}</a></li>
     @endforeach
     </ul>
 
