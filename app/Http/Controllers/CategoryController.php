@@ -11,7 +11,7 @@ class CategoryController extends Controller
         $categories = Category::all();
         return view('category/index',
             [
-                'titel' => 'Dit is een titel',
+                'titel' => 'Categories',
                 'categories' => $categories
             ]
         );

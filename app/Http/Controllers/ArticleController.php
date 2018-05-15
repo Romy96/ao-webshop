@@ -1,17 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-use App/Article;
+//use App/Article;
 
 class ArticleController extends Controller
 {
-    public function index() {
-        $articles = Article::find('category_id');
+    public function index($id) {
+        $articles = DB::table('articles')
+        	->select('*')
+        	->where('category_id', $id)
+        	->get();
         return view('article/index',
             [
-                'titel' => 'artikels',
+                'titel' => 'Artikels',
                 'articles' => $articles
             ]
         );

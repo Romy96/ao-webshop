@@ -1,12 +1,14 @@
 @extends('layouts/front')
 
 @section('body')
-    {{ $titel }}
+    <h1>{{ $titel }}</h1>
 
-    <ul>
+    
     @foreach($articles as $article)
-        <li>{{ $article->name }}</li>
+        <h2>{{ $article->name }}</h2></br>
+        <p><span>{{ $article->price }}</span></p></br>
+        <p>{{ $article->description }}</p>
     @endforeach
-    </ul>
+    
 
 @endsection
