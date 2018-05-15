@@ -17,3 +17,4 @@ Route::get('/', function () {
 
 Route::get('category/index', "CategoryController@index");
 Route::get('article/{id}', "ArticleController@index");
+Route::get('article/view/{id}', "ArticleController@view");

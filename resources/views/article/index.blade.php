@@ -3,12 +3,11 @@
 @section('body')
     <h1>{{ $titel }}</h1>
 
-    
+    <ul>
     @foreach($articles as $article)
-        <h2>{{ $article->name }}</h2></br>
-        <p><span>{{ $article->price }}</span></p></br>
-        <p>{{ $article->description }}</p>
+        <li><a href="{{url('article/view/' . $article->id)}}">{{ $article->name }}</a></li>
     @endforeach
+	</ul>
     
 
 @endsection

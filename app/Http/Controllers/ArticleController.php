@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-//use App/Article;
+use App\Article;
 
 class ArticleController extends Controller
 {
@@ -18,5 +18,15 @@ class ArticleController extends Controller
                 'articles' => $articles
             ]
         );
+    }
+
+    public function view($id){
+    	$article_details = Article::getArticle($id);
+
+    	return view('article/view',
+    	[
+    		'article_details' => $article_details
+    	]
+    );
     }
 }
